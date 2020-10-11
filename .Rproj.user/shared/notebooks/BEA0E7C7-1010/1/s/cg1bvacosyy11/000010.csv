@@ -1,0 +1,4 @@
+"0","mypar(1,3)"
+"0","males <- filter(nym.2002, gender==""Male"") %>% select(time) %>% unlist"
+"0","females <- filter(nym.2002, gender==""Female"") %>% select(time) %>% unlist"
+"0","boxplot(females, males)"

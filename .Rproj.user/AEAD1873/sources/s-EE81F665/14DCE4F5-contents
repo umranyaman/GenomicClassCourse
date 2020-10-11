@@ -1,0 +1,87 @@
+---
+title: "Untitled"
+output: html_document
+---
+```{r}
+dim(dat)
+qqnorm(dat)
+```
+
+```{r}
+for (i in 1:9) {
+    qqnorm(dat[,i])
+    qqline(dat[,i])
+}
+    
+    hist(dat[,4])
+```
+
+```{r}
+a=data("InsectSprays")
+head(InsectSprays)
+boxplot(split(values, factor))
+boxplot(values ~ factor)
+```
+
+
+```{r}
+mypar(1,3)
+males <- filter(nym.2002, gender=="Male") %>% select(time) %>% unlist
+females <- filter(nym.2002, gender=="Female") %>% select(time) %>% unlist
+boxplot(females, males)
+hist(females,xlim=c(range( nym.2002$time)))
+hist(males,xlim=c(range( nym.2002$time)))
+```
+```{r}
+set.seed(1)
+x=femaleControlsPopulation
+X <- sample(x,5)
+abs( mean(X) - mean(x) )
+```
+
+```{r}
+library(downloader) 
+url <- "https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/femaleControlsPopulation.csv"
+filename <- basename(url)
+download(url, destfile=filename)
+x <- unlist( read.csv(filename) )
+#make averages5
+set.seed(1)
+n <- 1000
+averages5 <- vector("numeric",n)
+for(i in 1:n){
+  X <- sample(x,5)
+  averages5[i] <- mean(X)
+}
+
+# make averages50
+set.seed(1)
+n <- 1000
+averages50 <- vector("numeric",n)
+for(i in 1:n){
+  X <- sample(x,50)
+  averages50[i] <- mean(X)
+}
+hist(averages5)
+hist(averages50)
+
+library(rafalib) 
+###mypar(1,2) is optional and is used to put both plots on one page
+mypar(1,2)
+hist(averages5, xlim=c(18,30))
+hist(averages50, xlim=c(18,30))
+
+pnorm(23,23.9,0.43)
+
+chowweight=filter(dat, Diet=="chow"&Sex=="M")
+mean(chowweight$Bodyweight)
+popsd(chowweight$Bodyweight)
+set.seed(1)
+X=sample(x,25)
+mean(X)
+popsd(X)
+```
+```{r}
+
+```
+

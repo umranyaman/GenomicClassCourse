@@ -1,0 +1,32 @@
+{
+    "id": "BF2A558A",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1602342485692.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "expression": "nym.2002",
+        "caption": "nym.2002",
+        "totalObservations": 1000,
+        "displayedObservations": 1000,
+        "variables": 5,
+        "cacheKey": "A9DA63C8",
+        "object": "nym.2002",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=nym.2002&cache_key=A9DA63C8&max_cols=50",
+        "preview": 0
+    },
+    "folds": "",
+    "lastKnownWriteTime": 2799296400704,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1602342485692,
+    "read_only": false,
+    "read_only_alternatives": []
+}

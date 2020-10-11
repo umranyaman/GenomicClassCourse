@@ -1,0 +1,4 @@
+"0","for (i in 1:9) {"
+"0","    qqnorm(dat[,i])"
+"0","    qqline(dat[,i])"
+"0","}"
